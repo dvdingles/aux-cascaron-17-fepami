@@ -6,7 +6,7 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/4D FEPAMI.gltf");
+  const { nodes, materials } = useGLTF("/5D FEPAMI.gltf");
   return (
     <group {...props} dispose={null}>
       <mesh
@@ -99,4 +99,9 @@ export function Dav(props) {
   );
 }
 
-useGLTF.preload("/4D FEPAMI.gltf");
+useGLTF.preload("/5D FEPAMI.gltf");
+
+
+rembrandt
+
+city
