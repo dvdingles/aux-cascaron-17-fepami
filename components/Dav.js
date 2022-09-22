@@ -6,10 +6,56 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/3D CORDOBA PREMIUM.gltf");
+  const { nodes, materials } = useGLTF("/3D FEPAMI.gltf");
   return (
     <group {...props} dispose={null}>
-      <group position={[0, 0, 0.01]}>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plano002.geometry}
+        material={materials["Material.001"]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plano003.geometry}
+        material={materials["Material.001"]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Plano004.geometry}
+        material={materials["Material.001"]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Texto.geometry}
+        material={materials["Material.001"]}
+        position={[0.09, -0.14, -0.17]}
+        scale={-0.04}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Texto001.geometry}
+        material={materials["Material.001"]}
+        position={[-0.07, -0.14, -0.34]}
+        scale={-0.04}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes.Texto002.geometry}
+        material={materials["Material.001"]}
+        position={[-0.17, -0.04, -0.29]}
+        rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
+        scale={-0.04}
+      />
+      <group
+        position={[-0.09, -0.01, -0.15]}
+        rotation={[-Math.PI, 0, -Math.PI]}
+      >
         <mesh
           castShadow
           receiveShadow
@@ -29,8 +75,28 @@ export function Dav(props) {
           material={materials.TQ_ARD_edge}
         />
       </group>
+      <group position={[0.09, 0, 0.15]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["TQ_ARD-geom001"].geometry}
+          material={materials["TQ_ARD_front.001"]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["TQ_ARD-geom001_1"].geometry}
+          material={materials["TQ_ARD_back.001"]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes["TQ_ARD-geom001_2"].geometry}
+          material={materials["TQ_ARD_edge.001"]}
+        />
+      </group>
     </group>
   );
 }
 
-useGLTF.preload("/3D CORDOBA PREMIUM.gltf");
+useGLTF.preload("/3D FEPAMI.gltf");
