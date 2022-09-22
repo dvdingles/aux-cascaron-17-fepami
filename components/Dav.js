@@ -100,8 +100,3 @@ export function Dav(props) {
 }
 
 useGLTF.preload("/5D FEPAMI.gltf");
-
-
-rembrandt
-
-city
